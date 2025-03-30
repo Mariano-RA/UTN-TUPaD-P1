@@ -3,7 +3,7 @@
 📍 *Universidad Tecnológica Nacional*  
 
 ## ✨ Estudiante  
-- **Nombre: Rodriguez Arce, Mariano
+- **Nombre:** Rodriguez Arce, Mariano
 - **Comisión:** M2025-20
 
 ## 📂 Descripción del Repositorio  
