@@ -74,3 +74,68 @@ if(ultima_letra.lower() in ['a','e','i','o','u']):
     print(frase_ingresada)
 else:
     print(frase_ingresada)
+
+print("\n\n8) Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 dependiendo de la opción que desee:")
+
+nombre_ingresado = input("Ingresa el nombre: ")
+print("Ingresa la opcion que desees: ")
+print(" 1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO." )
+print(" 2. Si quiere su nombre en minúsculas. Por ejemplo: pedro." )
+print(" 3. Si quiere su nombre con la primera letra mayúscula. ")
+opcion_deseada = int(input("Opcion: "))
+
+if(opcion_deseada == 1):
+    print(nombre_ingresado.upper())
+elif(opcion_deseada == 2):
+    print(nombre_ingresado.lower())
+elif(opcion_deseada == 3):
+    print(nombre_ingresado.capitalize())
+else:
+    print("Opcion invalida.")
+
+
+print("\n\n9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado por pantalla.")
+
+magnitud_ingresada = int(input("Ingrese la magnitud del terremoto: "))
+if(magnitud_ingresada < 3):
+    print('Categoría: "Muy leve" (imperceptible)')
+elif(magnitud_ingresada >= 3 and magnitud_ingresada < 4):
+    print('Categoría: "Leve" (ligeramente perceptible)')
+elif(magnitud_ingresada >= 4 and magnitud_ingresada < 5):
+    print('Categoría: "Moderado" (sentido por personas, pero generalmente no causa daños)')
+elif(magnitud_ingresada >= 5 and magnitud_ingresada < 6):
+    print('Categoría: "Fuerte" (puede causar daños en estructuras débiles)')
+elif(magnitud_ingresada >= 6 and magnitud_ingresada < 7):
+    print('Categoría: "Muy Fuerte" (puede causar daños significativos)')
+else:
+    print('Categoría: "Extremo" (puede causar graves daños a gran escala)')
+
+
+print("\n\nEscribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla si el usuario se encuentra en otoño, invierno, primavera o verano.")
+
+hemisferio = input("Ingrese en cuál hemisferio se encuentra (N/S): ")
+mes = int(input("Ingrese que mes del año es: "))
+dia = int(input("Ingrese que dia del año es: "))
+
+fecha = (mes, dia)
+
+if hemisferio == 'N':
+    if (mes == 12 and dia >= 21) or (1 <= mes <= 2) or (mes == 3 and dia <= 20):
+        estacion = "Invierno"
+    elif (mes == 3 and dia >= 21) or (4 <= mes <= 5) or (mes == 6 and dia <= 20):
+        estacion = "Primavera"
+    elif (mes == 6 and dia >= 21) or (7 <= mes <= 8) or (mes == 9 and dia <= 20):
+        estacion = "Verano"
+    else:
+        estacion = "Otoño"
+elif hemisferio == 'S':
+    if (mes == 12 and dia >= 21) or (1 <= mes <= 2) or (mes == 3 and dia <= 20):
+        estacion = "Verano"
+    elif (mes == 3 and dia >= 21) or (4 <= mes <= 5) or (mes == 6 and dia <= 20):
+        estacion = "Otoño"
+    elif (mes == 6 and dia >= 21) or (7 <= mes <= 8) or (mes == 9 and dia <= 20):
+        estacion = "Invierno"
+    else:
+        estacion = "Primavera"
+else:
+    estacion = "Hemisferio no válido"
